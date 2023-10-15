@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
+import axios from "axios";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [todoItem, setTodoItem] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/1/todos")
+      .then((response) => {
+        setTasks(response.data);
+      });
+  }, []);
 
   const addTask = (title) => {
     const newTask = { id: Date.now(), title, completed: false };
