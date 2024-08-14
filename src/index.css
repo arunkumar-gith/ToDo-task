@@ -29,7 +29,7 @@ html {
   background: #50329b;
   border-radius: 10px;
 }
-.hero::before {
+/* .hero::before {
   content: "";
   width: 100%;
   height: 280px;
@@ -84,4 +84,4 @@ html {
 
 .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
   opacity: 1;
-}
+} */
